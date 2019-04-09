@@ -16,8 +16,21 @@ require_once("config.php");
 // echo json_encode($search);
 
 // Carrega usuario autenticado
+// $usuario = new Usuario();
+// $usuario->login("jadir", "1234567");
+// echo $usuario;
+
+//Criando novo usuario
+// $aluno = new Usuario("aluno2", "aluno2");
+// // $aluno->setDesLogin("aluno");
+// // $aluno->setDesSenha("@lun0");
+// $aluno->insert();
+// echo $aluno
+
+// Atualizando usuario
 $usuario = new Usuario();
-$usuario->login("jadir", "1234567");
+$usuario->loadById(7);
+$usuario->update("professor", "123456");
 echo $usuario;
 
 ?>
